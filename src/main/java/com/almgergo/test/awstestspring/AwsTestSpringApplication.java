@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AwsTestSpringApplication {
 
     public static void main(String[] args) throws InterruptedException {
-        Thread.sleep(20000);
+        Thread.sleep(100);
         SpringApplication.run(AwsTestSpringApplication.class, args);
     }
 

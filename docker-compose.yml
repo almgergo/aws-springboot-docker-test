@@ -1,0 +1,32 @@
+version: '2'
+services:
+  blue-server:
+    container_name: blue-server
+    image: almgergo/aws-test:latest
+    ports:
+      - 8080:8080
+    networks:
+      - blue
+  green-server:
+    container_name: green-server
+    image: almgergo/aws-test2:latest
+    ports:
+      - 8090:8080
+    networks:
+      - green
+  proxy:
+    container_name: nginx-proxy
+    build: ./nginx
+    image: reverse-proxy
+    networks:
+      - blue
+      - green
+    ports:
+      - 80:80
+      - 443:443
+networks:
+  blue:
+    driver: bridge
+  green:
+    driver: bridge
+
