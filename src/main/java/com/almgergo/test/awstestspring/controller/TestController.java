@@ -8,12 +8,12 @@ public class TestController {
 
     @RequestMapping("/")
     public String hello() {
-        return "Hello Root!";
+        return "Hello Root 14!";
     }
 
     @RequestMapping("/hello")
     public String index() {
-        return "Greetings from Spring Boot!";
+        return "Greetings from Spring Boot 14!";
     }
 
 }
