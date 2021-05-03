@@ -1,0 +1,19 @@
+branch-defaults:
+  default:
+    environment: aws-test
+environment-defaults:
+  aws-test:
+    branch: null
+    repository: null
+global:
+  application_name: aws-test
+  default_ec2_keyname: aws-eb
+  default_platform: Docker running on 64bit Amazon Linux 2
+  default_region: eu-central-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  sc: null
+  workspace_type: Application
